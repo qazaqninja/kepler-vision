@@ -1,0 +1,202 @@
+name: kepler_vision
+description: Kepler Vision
+publish_to: "none"
+
+version: 2.0.2+3
+
+environment:
+  sdk: ^3.5.3
+
+# * Application Packages and Libraries
+# * Flutter Packages overrides for conflict resolution
+dependency_overrides:
+  intl: ^0.18.1
+
+dependencies:
+  collection: ^1.18.0
+  connectivity_plus: ^6.1.1
+  crop_your_image: ^2.0.0
+  device_info_plus: ^11.2.0
+  dio: ^5.1.1
+  equatable: ^2.0.5
+  file_picker: ^9.2.1
+  firebase_core: ^3.6.0
+  firebase_messaging: ^15.1.3
+  fluent_ui: ^4.5.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.0
+  flutter_dotenv: ^5.0.2
+  flutter_localizations:
+    sdk: flutter
+  flutter_native_splash: ^2.2.15
+  flutter_svg: ^2.0.5
+  flutter_switch: ^0.3.2
+  fpdart: ^1.1.0
+  freezed_annotation: ^2.2.0
+  get_it: ^8.0.3
+  go_router: ^14.2.3
+  google_api_availability: ^5.0.0
+  hive_flutter: ^1.1.0
+  image_picker: ^1.1.2
+  injectable: ^2.1.1
+  intl: ^0.18.1
+  jwt_decode: ^0.3.1
+  l: ^5.0.0
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  provider: ^6.1.2
+  record: ^5.1.2
+  rxdart: ^0.28.0
+  sentry_flutter: ^8.9.0
+  shared_preferences: ^2.3.3
+  shimmer: ^3.0.0
+  stack_trace: ^1.11.1
+  url_launcher: ^6.3.1
+  uuid: ^4.5.1
+  video_player: ^2.9.3
+  video_thumbnail: ^0.5.3
+  web_socket_channel: ^3.0.2
+
+# * Packages that will not be in the release version of app
+dev_dependencies:
+  bloc_test: ^10.0.0
+
+  # * Code Generators
+  # Generating Files
+  build_runner: ^2.4.6
+
+  # * UI Testing
+  # Preview for different devices
+  device_preview: ^1.1.0
+  # Generate Fake Data
+  faker: ^2.0.0
+  # Generating Asset Files
+  flutter_gen_runner: ^5.1.0+1
+
+  # * Linter and code organization
+  # Linter
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+  # Code Generation for Models and Union Types
+  freezed: ^2.2.0
+  # Injecting Dependencies
+  injectable_generator: ^2.1.1
+  # Generating Serialization of JSON
+  json_serializable: ^6.5.4
+  # Data Mocking
+  mockito: ^5.3.2
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/icons/
+    - assets/app_images/
+    - assets/splash/
+    - assets/fonts/
+
+  fonts:
+    - family: app_icons
+      fonts:
+        - asset: assets/fonts/app_icons.ttf
+
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Manrope-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Manrope-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Manrope-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Manrope-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Manrope-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Manrope-ExtraLight.ttf
+          weight: 200
+
+# * Localizations generating config
+flutter_intl:
+  enabled: true
+  arb_dir: lib/src/core/localization/intl
+  output_dir: lib/src/core/localization/generated
+  class_name: S # This is the default class name for the generated delegate
+  main_locale: ru # Specify your main locale
+  translate_var: loc # This matches your context.loc usage
+
+# * Flutter Icon Generator Configurations
+flutter_icons:
+  image_path: "assets/icons/prod.png"
+  # Android Icon
+  android: true
+  adaptive_icon_background: "#1E1E1E"
+  # iOS Icon
+  ios: true
+  remove_alpha_ios: true
+
+# * Flutter Splash Screen Generator Configurations
+flutter_native_splash:
+  android: true
+  ios: true
+  color: "#FFFFFF"
+  color_dark: "000000"
+  image: assets/splash/light.png
+  image_dark: assets/splash/dark.png
+  fullscreen: true
+  android_gravity: center
+  android_12:
+    image: assets/splash/light.png
+    image_dark: assets/splash/dark.png
+    icon_background_color: "#FFFFFF"
+    icon_background_color_dark: "#000000"
+
+# * Flutter Flavor Configurations
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+      customConfig:
+        minSdkVersion: 23
+    ios:
+      buildSettings: {}
+  flavors:
+    dev:
+      app:
+        name: "Kepler Vision"
+        version: "2.0.2"
+        buildNumber: "5"
+        icon: "assets/icons/dev.png"
+      android:
+        applicationId: "kz.kepler_vision.app"
+        flavorName: "Dev"
+      ios:
+        bundleId: "kz.kepler-vision.app"
+
+    staging:
+      app:
+        name: "Kepler Vision"
+        version: "2.0.2"
+        buildNumber: "5"
+        icon: "assets/icons/stage.png"
+      android:
+        applicationId: "kz.kepler_vision.app"
+        flavorName: "Staging"
+      ios:
+        bundleId: "kz.kepler-vision.app"
+
+    prod:
+      app:
+        name: "Kepler Vision"
+        version: "2.0.2"
+        buildNumber: "5"
+        icon: "assets/icons/prod.png"
+      android:
+        applicationId: "kz.kepler_vision.app"
+        flavorName: "Prod"
+      ios:
+        bundleId: "kz.kepler-vision.app"

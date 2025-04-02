@@ -1,0 +1,12 @@
+module DKPhotoGallery {
+  umbrella header "DKPhotoGallery-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+
+module DKPhotoGallery.Swift {
+  header "/Users/qazaqninja/Developer/kepler_vision/build/ios/Debug-prod-iphoneos/DKPhotoGallery/Swift Compatibility Header/DKPhotoGallery-Swift.h"
+  requires objc
+}

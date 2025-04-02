@@ -1,0 +1,12 @@
+module DKImagePickerController {
+  umbrella header "DKImagePickerController-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+
+module DKImagePickerController.Swift {
+  header "/Users/qazaqninja/Developer/kepler_vision/build/ios/Debug-prod-iphoneos/DKImagePickerController/Swift Compatibility Header/DKImagePickerController-Swift.h"
+  requires objc
+}

@@ -1,0 +1,12 @@
+module SwiftyGif {
+  umbrella header "SwiftyGif-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+
+module SwiftyGif.Swift {
+  header "/Users/qazaqninja/Developer/kepler_vision/build/ios/Debug-prod-iphoneos/SwiftyGif/Swift Compatibility Header/SwiftyGif-Swift.h"
+  requires objc
+}

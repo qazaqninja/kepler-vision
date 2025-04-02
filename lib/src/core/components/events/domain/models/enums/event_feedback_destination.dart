@@ -1,0 +1,4 @@
+enum EventFeedbackDestination {
+  student,
+  parent;
+}

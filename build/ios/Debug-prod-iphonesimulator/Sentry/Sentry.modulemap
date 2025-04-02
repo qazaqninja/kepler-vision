@@ -1,0 +1,12 @@
+module Sentry {
+  umbrella header "Sentry-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+
+module Sentry.Swift {
+  header "/Users/qazaqninja/Developer/kepler_vision/build/ios/Debug-prod-iphonesimulator/Sentry/Swift Compatibility Header/Sentry-Swift.h"
+  requires objc
+}
